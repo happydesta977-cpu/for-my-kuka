@@ -49,6 +49,11 @@
             color:white;
             cursor:pointer;
         }
+        .fade-message {
+            text-align:center;
+            font-size: 1.3em;
+            margin: 50px 20px;
+        }
         @media (max-width: 600px) {
             h1 { font-size: 2em !important; word-wrap: break-word; max-width:90%; }
             h2 { font-size: 1.5em !important; }
@@ -68,70 +73,58 @@
     <source src="my-music.mp3" type="audio/mp3">
 </audio>
 
-<!-- Our Story Section -->
-<section>
-    <h2>Our Story</h2>
+<!-- 1) Personal Intro -->
+<div id="message" class="fade-message" style="display:none;">
+    Kukayee… there are many things I could say today, but I want this to be real.
+</div>
+
+<!-- 2) Our Beginning -->
+<section id="beginning" style="display:none;">
+    <h2>Our Beginning</h2>
     <p>
-        Kukaye… we met through our church ministry responsibilities and became friends over time.  
-        Our bond grew stronger, and on March 16, 2025, we officially started our relationship.  
-        Through everything, I realized one thing: I love you deeply and truly.  
-        You have a power over me — you hold my attention, my thoughts, my smile, all effortlessly.  
+        We met in church. Not randomly. As young adults ministry leaders. God placed us in the same space, serving Him.  
+        Before I even knew you deeply, you respected me. You appreciated me. You listened to me. You made me feel accepted.  
+        That feeling changed something in me. Our friendship grew, and eventually, we started our beautiful relationship.
     </p>
 </section>
 
-<!-- Special Memory -->
-<section>
-    <h2>Special Moment</h2>
+<!-- 3) The Moment That Meant Everything -->
+<section id="moment" style="display:none;">
+    <h2>The Moment That Meant Everything</h2>
     <p>
-        One of the most beautiful moments of my life was when you thought, took your time,  
-        and came to me asking to restart our relationship.  
-        Your patience, trust, and hope in God, even knowing my flaws, made me love you more than ever.  
-        That moment will always be engraved in my heart.
+        The day you came back and asked to build again. I don’t think you fully understand what that did to my heart.  
+        It takes strength for a woman to rethink, reflect, and choose again. You didn’t act from pride. You acted from sincerity.  
+        That moment made me respect you even more. It showed me your depth. Your courage. Your heart.  
+        That was one of the most beautiful moments of my life.
     </p>
 </section>
 
-<!-- You Are My Person Section -->
-<section>
-    <h2>You Are My Person 💖</h2>
+<!-- 4) Impossible Not to Love You -->
+<section id="love" style="display:none;">
+    <h2>Impossible Not to Love You</h2>
     <p>
-        I know sometimes you feel like you are not fully understood.  
-        And I want you to know — I am learning. I am growing. I am trying to understand you deeper.  
+        Kukaye… I have so many reasons to love you, and at the same time, my love doesn’t even need a reason.  
+        For Valentine’s, I want to share just a few that make my heart full every single day.
         <br><br>
-        You are patient with me. You stay. You trust.  
+        1️⃣ The way you accepted me before even fully knowing me. You respected me, appreciated me, listened to me, and made me feel completely seen and loved.  
+        That feeling of acceptance changed something in me. It made me realize what real love feels like. I felt safe, valued, and truly cared for.  
         <br><br>
-        I see that. And I don’t take it lightly.  
+        2️⃣ Your heart. You might look strong and independent on the outside, but inside, there is so much beauty, compassion, and tenderness.  
+        Your kindness, your laughter, your playful spirit, your care, your sense of fun — all of it amazes me.  
+        I love your hair, the way it shines, your smile that lights up the room, your sparkling eyes, your curves, your laughter, and even the little hairs that make you perfectly you.  
+        Everything about you, inside and out, makes me fall deeper in love every moment.  
         <br><br>
-        You have such a bright future ahead — a strong, talented, and beautiful soul with so much to share with the world.  
+        3️⃣ How being with you has taught me to love better. You’ve shown me patience, clarity, and a deeper understanding of love.  
+        Your presence challenges me, comforts me, and makes me want to grow. Your courage, your trust, your heart — everything you do inspires me to be the best version of myself.  
         <br><br>
-        And through everything, I know one thing clearly — I love you from the bottom of my heart.  
-        Not exaggerated. Not dramatic. Just real.
+        And of course… I love your playful spark. Even when you widen your toys and make me laugh, I love every bit of it.  
+        There are countless other reasons I love you, Kukaye, but for Valentine’s today, I wanted to share these few from my heart.
     </p>
 </section>
 
-<!-- Why I Love You -->
-<section>
-    <h2>Why I Love You</h2>
-    <p>
-        Kukaye… I have many reasons to love you, and at the same time, my love doesn’t even need a reason.  
-        For Valentine’s, here are just a few that make me smile every day:
-        <br><br>
-        1️⃣ The way you accepted me before fully knowing me — your kindness, comfort, and care felt like a dream.  
-        <br><br>
-        2️⃣ Your heart — strong, independent, yet compassionate and full of beauty inside.  
-        <br><br>
-        3️⃣ How being with you makes me grow — you’ve shown me patience, love, and clarity in my heart.  
-        <br><br>
-        And of course… your gorgeousness 😌  
-        Your hair, laughter, body, curves, and even the little hairs — everything about you amazes me.  
-        I love you even while you playfully widened your toys and made me laugh — that magical sparkle of yours just makes me love you more.  
-        <br><br>
-        There are countless other reasons I love you… these are just a few for Valentine’s.
-    </p>
-</section>
-
-<!-- Gallery Section -->
-<section>
-    <h2>Our Moments 📸</h2>
+<!-- 5) Gallery -->
+<section id="gallery" style="display:none;">
+    <h2>Our Pictures 📸</h2>
     <div class="gallery">
         <img src="pic1.jpg">
         <img src="pic2.jpg">
@@ -141,8 +134,22 @@
     </div>
 </section>
 
+<!-- 6) You Are My Person -->
+<section id="person" style="display:none;">
+    <h2>You Are My Person 💖</h2>
+    <p>
+        I know sometimes you feel like you are not fully understood.  
+        And I want you to know — I am learning. I am growing. I am trying to understand you deeper.  
+        You are patient with me. You stay. You trust.  
+        I see that. And I don’t take it lightly.  
+        You have such a bright future ahead — a strong, talented, and beautiful soul with so much to share with the world.  
+        And through everything, I know one thing clearly — I love you from the bottom of my heart.  
+        Not exaggerated. Not dramatic. Just real.
+    </p>
+</section>
+
 <!-- Interactive Ending -->
-<section>
+<section id="ending" style="display:none;">
   <h2>Will You Keep Choosing Me? 💖</h2>
   <p>Tap your answer below:</p>
   <div style="text-align:center; margin-top:20px;">
@@ -152,13 +159,21 @@
 </section>
 
 <script>
-    // Intro Button Function
     function startSite() {
         const audio = document.querySelector("audio");
         audio.play().catch(() => {
             alert("Tap the screen again to start the music 😉");
         });
         document.getElementById("intro").style.display = "none";
+        document.getElementById("message").style.display = "block";
+
+        // Sequentially show sections
+        setTimeout(() => document.getElementById("beginning").style.display = "block", 3000);
+        setTimeout(() => document.getElementById("moment").style.display = "block", 9000);
+        setTimeout(() => document.getElementById("love").style.display = "block", 15000);
+        setTimeout(() => document.getElementById("gallery").style.display = "block", 24000);
+        setTimeout(() => document.getElementById("person").style.display = "block", 32000);
+        setTimeout(() => document.getElementById("ending").style.display = "block", 40000);
     }
 
     // Floating hearts animation
