@@ -7,14 +7,14 @@
         body {
             font-family: 'Arial', sans-serif;
             background: #fff0f5;
-            color: #4d004d; /* dark purple text for readability */
+            color: #4d004d;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
         }
         h1, h2 {
             text-align: center;
-            color: #ff4d88; /* pink headings */
+            color: #ff4d88;
         }
         section {
             padding: 30px 20px;
@@ -36,7 +36,6 @@
         .gallery img:hover {
             transform: scale(1.05);
         }
-        /* Floating hearts animation */
         @keyframes float {
             0% { transform: translateY(0); opacity:0.6; }
             100% { transform: translateY(-100vh); opacity:0; }
@@ -50,13 +49,17 @@
             color:white;
             cursor:pointer;
         }
+        @media (max-width: 600px) {
+            h1 { font-size: 2em !important; word-wrap: break-word; max-width:90%; }
+            h2 { font-size: 1.5em !important; }
+        }
     </style>
 </head>
 <body>
 
 <!-- Intro Screen -->
 <div id="intro" style="position:fixed; width:100%; height:100%; background:#fff0f5; display:flex; justify-content:center; align-items:center; flex-direction:column; z-index:999;">
-    <h1 style="font-size:2.5em;">For Kukaye 💖</h1>
+    <h1 style="font-size:2.5em; text-align:center; word-wrap: break-word; max-width:90%;">For Kukaye 💖</h1>
     <button onclick="startSite()">Press me… I promise I won’t sing 🎹💖</button>
 </div>
 
@@ -65,28 +68,64 @@
     <source src="my-music.mp3" type="audio/mp3">
 </audio>
 
-<!-- Why I Love You Section -->
+<!-- Our Story Section -->
+<section>
+    <h2>Our Story</h2>
+    <p>
+        Kukaye… we met through our church ministry responsibilities and became friends over time.  
+        Our bond grew stronger, and on March 16, 2025, we officially started our relationship.  
+        Through everything, I realized one thing: I love you deeply and truly.  
+        You have a power over me — you hold my attention, my thoughts, my smile, all effortlessly.  
+    </p>
+</section>
+
+<!-- Special Memory -->
+<section>
+    <h2>Special Moment</h2>
+    <p>
+        One of the most beautiful moments of my life was when you thought, took your time,  
+        and came to me asking to restart our relationship.  
+        Your patience, trust, and hope in God, even knowing my flaws, made me love you more than ever.  
+        That moment will always be engraved in my heart.
+    </p>
+</section>
+
+<!-- You Are My Person Section -->
+<section>
+    <h2>You Are My Person 💖</h2>
+    <p>
+        I know sometimes you feel like you are not fully understood.  
+        And I want you to know — I am learning. I am growing. I am trying to understand you deeper.  
+        <br><br>
+        You are patient with me. You stay. You trust.  
+        <br><br>
+        I see that. And I don’t take it lightly.  
+        <br><br>
+        You have such a bright future ahead — a strong, talented, and beautiful soul with so much to share with the world.  
+        <br><br>
+        And through everything, I know one thing clearly — I love you from the bottom of my heart.  
+        Not exaggerated. Not dramatic. Just real.
+    </p>
+</section>
+
+<!-- Why I Love You -->
 <section>
     <h2>Why I Love You</h2>
     <p>
-        Kukaye… I have many reasons to love you, and at the same time, my love for you doesn’t need a reason.  
-        For Valentine’s, I’ll share just a few that make me smile and feel grateful every day:
+        Kukaye… I have many reasons to love you, and at the same time, my love doesn’t even need a reason.  
+        For Valentine’s, here are just a few that make me smile every day:
         <br><br>
-        1️⃣ The way you accepted me before fully knowing me.  
-        You listened, comforted, and treated me with care — like it was natural for you.
+        1️⃣ The way you accepted me before fully knowing me — your kindness, comfort, and care felt like a dream.  
         <br><br>
-        2️⃣ Your heart.  
-        Strong and independent, full of God’s love — yet soft, compassionate, and deeply beautiful inside.
+        2️⃣ Your heart — strong, independent, yet compassionate and full of beauty inside.  
         <br><br>
-        3️⃣ How being with you makes me grow.  
-        You’ve shown me patience, love beyond feelings, and clarity in my heart.
+        3️⃣ How being with you makes me grow — you’ve shown me patience, love, and clarity in my heart.  
         <br><br>
-        And yes… you’re absolutely gorgeous 😌  
-        Your hair, your laughter, your body, your curves, even the little hairs — everything about you amazes me.  
-        I love you even while you widened your toys and made me laugh — that playful magic of yours just makes me love you more.
+        And of course… your gorgeousness 😌  
+        Your hair, laughter, body, curves, and even the little hairs — everything about you amazes me.  
+        I love you even while you playfully widened your toys and made me laugh — that magical sparkle of yours just makes me love you more.  
         <br><br>
-        There are countless other reasons I love you… maybe too many to even count.  
-        But these are just a few I wanted to share today — just for Valentine’s.
+        There are countless other reasons I love you… these are just a few for Valentine’s.
     </p>
 </section>
 
@@ -100,6 +139,16 @@
         <img src="pic4.jpg">
         <img src="pic5.jpg">
     </div>
+</section>
+
+<!-- Interactive Ending -->
+<section>
+  <h2>Will You Keep Choosing Me? 💖</h2>
+  <p>Tap your answer below:</p>
+  <div style="text-align:center; margin-top:20px;">
+      <button onclick="chooseYes()" style="padding:10px 20px; margin:10px; border:none; border-radius:15px; background:#ff4d88; color:white; font-size:18px; cursor:pointer;">Yes 😍</button>
+      <button onclick="chooseNo()" style="padding:10px 20px; margin:10px; border:none; border-radius:15px; background:#aaaaaa; color:white; font-size:18px; cursor:pointer;">No 😅</button>
+  </div>
 </section>
 
 <script>
@@ -125,6 +174,15 @@
         document.body.appendChild(heart);
         setTimeout(()=>heart.remove(),6000);
     }, 1200);
+
+    // Interactive ending
+    function chooseYes() {
+        alert("💖 Yay! I knew it… I love you, Kukaye!");
+    }
+
+    function chooseNo() {
+        alert("😏 You can’t say no! I won’t give you a choice 😉 But I still love you!");
+    }
 </script>
 
 </body>
