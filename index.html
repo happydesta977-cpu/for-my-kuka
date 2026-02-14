@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Kukaye 💖</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #fff0f5;
+            color: #4d004d; /* dark purple text for readability */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #ff4d88; /* pink headings */
+        }
+        section {
+            padding: 30px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 280px;
+            margin: 12px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transition: transform 0.4s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        /* Floating hearts animation */
+        @keyframes float {
+            0% { transform: translateY(0); opacity:0.6; }
+            100% { transform: translateY(-100vh); opacity:0; }
+        }
+        #intro button {
+            padding:15px 25px;
+            font-size:18px;
+            border-radius:20px;
+            border:none;
+            background-color:#ff4d88;
+            color:white;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Intro Screen -->
+<div id="intro" style="position:fixed; width:100%; height:100%; background:#fff0f5; display:flex; justify-content:center; align-items:center; flex-direction:column; z-index:999;">
+    <h1 style="font-size:2.5em;">For Kukaye 💖</h1>
+    <button onclick="startSite()">Press me… I promise I won’t sing 🎹💖</button>
+</div>
+
+<!-- Audio -->
+<audio loop>
+    <source src="my-music.mp3" type="audio/mp3">
+</audio>
+
+<!-- Why I Love You Section -->
+<section>
+    <h2>Why I Love You</h2>
+    <p>
+        Kukaye… I have many reasons to love you, and at the same time, my love for you doesn’t need a reason.  
+        For Valentine’s, I’ll share just a few that make me smile and feel grateful every day:
+        <br><br>
+        1️⃣ The way you accepted me before fully knowing me.  
+        You listened, comforted, and treated me with care — like it was natural for you.
+        <br><br>
+        2️⃣ Your heart.  
+        Strong and independent, full of God’s love — yet soft, compassionate, and deeply beautiful inside.
+        <br><br>
+        3️⃣ How being with you makes me grow.  
+        You’ve shown me patience, love beyond feelings, and clarity in my heart.
+        <br><br>
+        And yes… you’re absolutely gorgeous 😌  
+        Your hair, your laughter, your body, your curves, even the little hairs — everything about you amazes me.  
+        I love you even while you widened your toys and made me laugh — that playful magic of yours just makes me love you more.
+        <br><br>
+        There are countless other reasons I love you… maybe too many to even count.  
+        But these are just a few I wanted to share today — just for Valentine’s.
+    </p>
+</section>
+
+<!-- Gallery Section -->
+<section>
+    <h2>Our Moments 📸</h2>
+    <div class="gallery">
+        <img src="pic1.jpg">
+        <img src="pic2.jpg">
+        <img src="pic3.jpg">
+        <img src="pic4.jpg">
+        <img src="pic5.jpg">
+    </div>
+</section>
+
+<script>
+    // Intro Button Function
+    function startSite() {
+        const audio = document.querySelector("audio");
+        audio.play().catch(() => {
+            alert("Tap the screen again to start the music 😉");
+        });
+        document.getElementById("intro").style.display = "none";
+    }
+
+    // Floating hearts animation
+    setInterval(() => {
+        let heart = document.createElement("div");
+        heart.innerHTML = "💗";
+        heart.style.position = "fixed";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.bottom = "-20px";
+        heart.style.fontSize = (Math.random()*15 + 15) + "px";
+        heart.style.opacity = 0.6;
+        heart.style.animation = "float 6s linear";
+        document.body.appendChild(heart);
+        setTimeout(()=>heart.remove(),6000);
+    }, 1200);
+</script>
+
+</body>
+</html>
